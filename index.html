@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP2 "People management"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dark"></div>
+    <div id="wrapper">
+        <div style="width:240px">
+            <form id="form">
+                <caption>Долучити клієнта:</caption>
+                <label for="name">Ім'я:<em>*</em></label><input type="text" id="name" placeholder="name">
+                <span>Вкажіть стать:</span>
+                <div>
+                    <input type="radio" id="man" name="sex" value="чоловік" checked>
+                    <label for="man">чоловіча</label>
+                    <input type="radio" id="woman" name="sex" value="жінка" >
+                    <label for="woman">жіноча</label>
+                </div>
+                <label for="birthday">Дата народження:<em>*</em></label><input  id="birthday" name="birthday" type="date" placeholder="birthday date">
+                <label for="address">Адреса:<em>*</em></label><textarea id="address" name="address" style="width: 197px"  placeholder="address"></textarea>
+                <label for="phone">Телефон:<em>*</em></label><input id="phone" name="phone" type="phone"  placeholder="phone">
+                <label for="email">E-mail:<em>*</em></label><input id="email" name="email" type="email"  placeholder="email">
+                <input type="submit" id="save-button" onclick="event.preventDefault()" value="зберегти"> 
+                <span>Оберіть дію:</span>
+                <div>
+                    <input type="radio" id="show-client" name="show/delete" value="show" checked>
+                    <label for="show-client">показати</label>
+                    <input type="radio" id="delete-client" name="show/delete" value="delete">
+                    <label for="delete-client">видалити</label>
+                </div>
+            </form>
+        </div>
+        <div id="table-div">
+            <table  class="table">
+                <caption>Інформація про клієнтів</caption>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Стать</th>
+                    <th>Дата народження</th>
+                    <th>Адреса</th>
+                    <th>Телефон</th>
+                    <th>E-mail</th>
+                </tr>
+            </table>
+            <table id="table" class="table"></table>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
